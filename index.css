@@ -1,0 +1,299 @@
+/* تطبيق خط المراعي على الصفحة */
+body {
+  font-family: 'Almarai', sans-serif;
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7fa;
+  color: #333;
+  transition: background-color 0.1s ease, color 0.1s ease;
+  /* تم تقليل مدة الانتقال */
+  text-align: center;
+
+}
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;flex-direction: column;
+}
+
+/* تنسيق العنوان */
+h2 {
+  font-size: 24px;
+  color: inherit;
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+
+/* تنسيق النص التوضيحي */
+p {
+  font-size: 14px;
+  color: inherit;
+  margin-bottom: 50px;
+}
+
+/* شريط علوي يحتوي على الشعار واسم الشركة وزر الوضع */
+.top-bar {
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 600px;
+}
+
+.logo {
+  width: 300px;
+  padding: 0;
+  margin-right: 0px;
+
+}
+
+.company-name {
+  margin-left: 50px;
+  margin-top: 34px;
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+
+/* تنسيق الحقول مع الأيقونات */
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+  /* زيادة التباعد بين الحقول */
+  text-align: right;
+  width: 100%;
+  max-width: 400px;
+}
+
+.input-group i {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #5bc0de;
+  /* لون أزرق فاتح للأيقونات */
+}
+
+/* حاوية خاصة لجعل الاسم والراتب بجانب بعض */
+.flex-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* ضبط الحقول */
+.flex-row .input-group {
+  flex: 1;
+  /* تساوي عرض الحقول */
+}
+
+/* الحقول */
+input[type="text"],
+input[type="number"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 16px 15px 16px 40px;
+  border: none;
+  border-radius: 15px;
+  box-sizing: border-box;
+  font-size: 16px;
+  background-color: rgba(91, 192, 222, 0.1);
+  /* خلفية زرقاء فاتحة شفافة */
+  color: #333;
+  direction: rtl;
+  appearance: none;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  font-family: 'Almarai', sans-serif;
+}
+
+
+/* زر الإرسال */
+button {
+  width: 200px;
+  /* العرض المحدد */
+  background-color: #007bff;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  /* جعل الزر دائري */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  font-family: 'Almarai', sans-serif;
+  margin-top: 20px;
+}
+
+
+
+/* تنسيق الفوتر */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #f5f7fa;
+
+}
+
+
+
+/* تنسيق أيقونات التواصل الاجتماعي */
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #5bc0de;
+  /* لون الأيقونات */
+  font-size: 20px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+  /* تغيير لون الأيقونة عند التمرير */
+}
+
+
+
+
+/* أيقونة واتساب */
+.whatsapp {
+position: fixed;
+right: 0;
+bottom: 0;
+}
+.whatsapp i {
+  font-size: 66px;
+  color: #25d366;
+}
+/* تنسيق التنبيه */
+.alert {
+  padding: 15px;
+  background-color: #4CAF50;
+  /* لون التنبيه */
+  color: white;
+  border-radius: 0 0 8px 8px;
+  /* حواف دائرية من الأسفل */
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  font-size: 16px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 9999;
+}
+
+.alert.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alert.hidden {
+  display: none;
+}
+
+
+/* تصميم للأجهزة اللوحية (iPad) والشاشات الكبيرة */
+@media (max-width: 768px) {
+  .top-bar {
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px;
+  }
+
+  .logo {
+    width: 350px;
+  }
+
+  .company-name {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-top: 100px;
+  }
+
+
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  main{
+    padding: 10px ;
+  }
+  .top-bar {
+    width: 100%;
+    justify-content: space-around;
+  
+  }
+
+  .logo {
+    width: 350px;
+  }
+
+  .company-name {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-top: 100px;
+  }
+.card{
+  width: 90%;
+  margin: 10px auto;
+  padding: 0 1px;
+}
+
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .social-icons a {
+    font-size: 18px;
+  }
+
+  .footer p {
+    font-size: 12px;
+  }
+  .whatsapp i {
+    margin: 20px 20px;
+    font-size: 44px;
+    color: #25d366;
+  }
+}
+

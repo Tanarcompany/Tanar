@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>شركة تنار العقارية</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Almarai:wght@400;700&display=swap">
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="/images/logolight.webp">
+</head>
+
+<body >
+<main >
+
+
+  <!-- شريط علوي يحتوي على زر الوضع الليلي والشعار واسم الشركة -->
+  <div class="top-bar">
+    <img src="images/logolight.webp" loading="lazy" alt="" class="logo">
+    <!-- <div class="company-name"> شركة تنار العقارية</div> -->
+    </button>
+  </div>
+
+  <div class="card">
+    <h2>حقق حلمك</h2>
+    <p>حقق حلمك بامتلاك منزل العمر مع حلولنا المتنوعة في التمويل العقاري</p>
+
+    <form id="registrationForm" action="https://formspree.io/f/xyzyepeg" method="POST">
+      <div class="flex-row">
+        <div class="input-group">
+          <i class="fas fa-user"></i>
+          <input name="الإسم" type="text" id="fullName" placeholder="الاسم الكامل" required>
+        </div>
+
+        <div class="input-group">
+          <i class="fas fa-wallet"></i>
+          <input name="الراتب" type="number" id="salary" placeholder="الراتب" required>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-phone"></i>
+        <input name="رقم الهاتف" type="tel" id="phoneNumber" placeholder="رقم الهاتف" required>
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-briefcase"></i>
+        <select name="القطاع" id="workSector" required>
+          <option value="">اختر قطاع العمل</option>
+          <option value="حكومي">حكومي</option>
+          <option value=" خاص">خاص</option>
+
+        </select>
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-university"></i>
+        <select name="البنك" id="bank" required>
+          <option value="">اختر البنك</option>
+          <option value=" الأهلي السعودي">البنك الأهلي السعودي</option>
+          <option value="مصرف الراجحي">مصرف الراجحي</option>
+          <option value=" الرياض">بنك الرياض</option>
+          <option value="البلاد">بنك البلاد</option>
+          <option value="السعودي الفرنسي">البنك السعودي الفرنسي</option>
+          <option value="العربي الوطني">البنك العربي الوطني</option>
+          <option value="الجزيرة">بنك الجزيرة</option>
+          <option value="ساب">بنك ساب (البنك السعودي البريطاني)</option>
+          <option value="السعودي للاستثمار">البنك السعودي للاستثمار</option>
+          <option value="الإنماء">بنك الإنماء</option>
+        </select>
+      </div>
+
+      <button type="submait" onclick="submitForm()">
+        <span></span>
+        إرسال
+      </button>
+    </form>
+  </div>
+  <footer class="footer">
+    <div class="social-icons">
+      <a href="https://www.snapchat.com/add/tanarcompany?invite_id=88_T7xG3&share_id=juYa8Rr3Tw-QNvdNxMksTQ&sid=97b305c0e14849529f41098a7d7b2112"
+        target="_blank"><i class="fab fa-snapchat"></i></a>
+      <a href="https://x.com/tanarcompany?s=11" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/tanarcompany?igsh=enEyNDZpanJnaWdk" target="_blank"><i
+          class="fab fa-instagram"></i></a>
+    </div>
+    <p>جميع الحقوق محفوظة © لدى شركة تنار العقارية</p>
+
+  </footer>
+      <!-- أيقونة واتساب -->
+      <a href="https://api.whatsapp.com/send/?phone=966559109217&text&type=phone_number&app_absent=0" target="_blank"
+      class="whatsapp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+
+
+  <div id="successAlert" class="alert hidden">تم إرسال بياناتك بنجاح!</div>
+
+</ma>
+  <script src="index.js"></script>
+</body>
+
+</html>
